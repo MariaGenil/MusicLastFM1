@@ -47,13 +47,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="title">Música</h1>
+        <h1 className="title">Home Artistas</h1>
 
         {artists ? (
           <Artists artists={artists} setArtists={setArtists} />
         ) : (
           <>
             <img src={imageMusic} alt="Música" className="img-home" />
+                         
             <form onSubmit={handleSearchSubmit}>
               <input
                 type="text"
@@ -61,8 +62,8 @@ function App() {
                 onChange={handleSearchChange}
                 placeholder="Busca un artista"
               />
-              <button type="submit" className="btn-search">Buscar</button>
-            </form>
+              <button onClick={reqApi} className="btn-search">Buscar Artistas</button>
+            </form>      
           </>
         )}
       </header>

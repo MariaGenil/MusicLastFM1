@@ -1,7 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
-
-
+//import { useState } from 'react';
 export default function Artists(props) {
   const {artists, setArtists} = props;
 
@@ -22,7 +20,7 @@ export default function Artists(props) {
                 <a href={artist.url} target="_blank" rel="noopener noreferrer">Ver más</a>
                 <p><strong>Oyentes:</strong> {artist.listeners}</p>
                 {artist.image && artist.image[2] && (
-                  <img src={artist.image[2]['#text']} alt={artist.name} width="100" />
+                  <img src={artist.image['#text']} alt={artist.name} width="100" />
                 )}
               </div>
             </div>
