@@ -7,7 +7,8 @@ import Artists from './components/Artists';
 function App() {
   const [artists, setArtists] = useState(null);
   const [search, setSearch] = useState('');
-  const apiKey = '47fd8683c7bf38e1783af0d0d319ae5c'; // Tu clave de API
+
+  //Aquí debería ir la API Key const apiKey = ''; 
 
   // Realizamos la búsqueda de artistas
   const reqApi = async (query) => {
@@ -53,8 +54,7 @@ function App() {
           <Artists artists={artists} setArtists={setArtists} />
         ) : (
           <>
-            <img src={imageMusic} alt="Música" className="img-home" />
-                         
+            <img src={imageMusic} alt="Música" className="img-home"/>         
             <form onSubmit={handleSearchSubmit}>
               <input
                 type="text"
